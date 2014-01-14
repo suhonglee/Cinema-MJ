@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<!-- 
+Korea Contents Company R&D TEAM
+Developer : lee su hong
+Last-Modified : 2013.11.07
+ -->
+<mapper namespace="consult">
+	
+	<insert id="insertBbs" parameterType="com.kcontents.cinemadream.domain.Consult" useGeneratedKeys="true" keyProperty="no" keyColumn="no">
+		insert into cd_consult_bbs
+		(writer, password, tel, email, title, content, time, secret)
+		Values 
+		(#{writer},#{password},#{tel},#{email},#{title},#{content},now(),#{secret});
+	</insert>
+	
+	<insert id="insertReply" parameterType="com.kcontents.cinemadream.domain.Reply"  useGeneratedKeys="true" keyProperty="no" keyColumn="no">
+		insert into cd_consult_reply
+		(bbsNo, content, id, password, time)
+		Values
+		(#{bbsNo},#{content},#{id},#{password}, now());
+	</insert>
+	
+	<select id="selectBbsList" parameterType="java.util.HashMap" resultType="com.kcontents.cinemadream.domain.Consult">
+		select *
+		from cd_consult_bbs
+		order by no desc
+		<if test="page > 0">
+			limit #{limit} offset #{startNumber}
+		</if>
+	</select>
+	
+	<select id="selectBbsMaxSize" parameterType="java.util.HashMap" resultType="int">
+		select MAX((@rownum:=@rownum+1)) rownum
+		from (SELECT @rownum:=0) row, cd_consult_bbs
+	</select>
+	
+	<select id="selectBbs" parameterType="int" resultType="com.kcontents.cinemadream.domain.Consult">
+		select *
+		from cd_consult_bbs
+		where no=#{no}
+	</select>
+	<select id="selectReply" parameterType="java.lang.Integer" resultType="com.kcontents.cinemadream.domain.Reply">
+		select *
+		from cd_consult_reply
+		WHERE bbsNo=#{bbsNo}
+	</select>
+	<delete id="deleteBbs" parameterType="int">
+		delete from cd_consult_bbs
+		WHERE no = #{no} 
+	</delete>
+	<delete id="deleteReply" parameterType="java.util.HashMap">
+		delete from cd_consult_reply
+		WHERE no = #{reply.no} AND bbsNo = #{reply.bbsNo}
+		<if test="secret == true">
+			AND password = #{reply.password}
+		</if>;
+	</delete>	
+</mapper>

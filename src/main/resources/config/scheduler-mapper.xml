@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<!-- 
+Korea Contents Company R&D TEAM
+Developer : lee su hong
+Last-Modified : 2013.11.07
+ -->
+<mapper namespace="scheduler">
+	
+	<insert id="post" parameterType="com.kcontents.cinemadream.domain.Scheduler"  useGeneratedKeys="true" keyProperty="no" keyColumn="no">
+		insert into cd_scheduler_bbs
+		(year, month, day, hour, minute, place, bride, title, content, cancel)
+		Values 
+		(#{year},#{month},#{day},#{hour},#{minute},#{place},#{bride},#{title},#{content},false)
+	</insert>
+	
+	<select id="select" parameterType="int" resultType="com.kcontents.cinemadream.domain.Scheduler">
+		select * from cd_scheduler_bbs
+		where no=#{no}
+	</select>
+	
+	<select id="list" parameterType="java.util.Map" resultType="com.kcontents.cinemadream.domain.Scheduler">
+		select * from cd_scheduler_bbs
+		where year=#{year} AND month=#{month}
+	</select>
+	
+	<delete id="cancel" parameterType="java.util.Map">
+		update cd_scheduler_bbs
+		SET cancel=#{cancel}
+		where no=#{no}
+	</delete>
+</mapper>

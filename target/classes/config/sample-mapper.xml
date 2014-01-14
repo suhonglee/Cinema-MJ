@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<!-- 
+Korea Contents Company R&D TEAM
+Developer : lee su hong
+Last-Modified : 2013.11.07
+ -->
+<mapper namespace="sample">
+	
+	<insert id="insertBbs" parameterType="com.kcontents.cinemadream.domain.Sample"  useGeneratedKeys="true" keyProperty="no" keyColumn="no">
+		insert into cd_sample_bbs
+		(category, title, videoId, content, time)
+		Values 
+		(#{category},#{title},#{videoId},#{content},now())
+	</insert>
+	
+	<update id="updateBbs" parameterType="com.kcontents.cinemadream.domain.Sample">
+		update cd_sample_bbs
+		SET
+		category=#{category},title=#{title},videoId=#{videoId},content=#{content},thumbnailUrl=#{thumbnailUrl}
+		where no=#{no}
+	</update>
+	<select id="selectBbsList" resultType="java.util.HashMap">
+		select *
+		from cd_sample_bbs
+		order by no desc;
+	</select>
+	
+	<select id="selectBbs" parameterType="int" resultType="com.kcontents.cinemadream.domain.Sample">
+		select *
+		from cd_sample_bbs
+		where no=#{no}
+	</select>
+	
+	<select id="selectNear" parameterType="java.util.HashMap" resultType="com.kcontents.cinemadream.domain.Sample">
+		<![CDATA[
+		select pre.no, pre.title 
+		from (select no, title 
+				from cd_sample_bbs 
+				where no < #{no}
+				ORDER BY no DESC 
+				limit #{perPrefix}) as pre
+		UNION
+			select suf.no, suf.title 
+			from (select no, title 
+					from cd_sample_bbs 
+					where no > #{no} 
+					ORDER BY no ASC 
+					limit #{perSuffix}) as suf;
+		]]>
+	</select>
+	
+	<delete id="deleteBbs" parameterType="int">
+		delete from cd_sample_bbs
+		WHERE no = #{no} 
+	</delete>
+	
+	<update id="postHit" parameterType="int">
+		update cd_sample_bbs
+		SET hit = hit +1
+		where no = #{no}
+	</update>
+</mapper>

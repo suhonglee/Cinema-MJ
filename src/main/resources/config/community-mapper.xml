@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<!-- 
+Korea Contents Company R&D TEAM
+Developer : lee su hong
+Last-Modified : 2013.11.07
+ -->
+<mapper namespace="community">
+	
+	<insert id="insert" parameterType="com.kcontents.cinemadream.domain.Community"  useGeneratedKeys="true" keyProperty="no" keyColumn="no">
+		insert into cd_community_bbs
+		(title, content, time)
+		Values 
+		(#{title},#{content},now())
+	</insert>
+	
+	<update id="update" parameterType="com.kcontents.cinemadream.domain.Community">
+		update cd_community_bbs
+		SET
+		title=#{title},content=#{content}
+		where no=#{no}
+	</update>
+	
+	<select id="selectList" parameterType="java.util.HashMap" resultType="com.kcontents.cinemadream.domain.Community">
+		select *
+		from cd_community_bbs
+		order by no desc
+		<if test="page > 0">
+			limit #{limit} offset #{startNumber}
+		</if>
+	</select>
+	
+	<select id="selectNear" parameterType="java.util.HashMap" resultType="com.kcontents.cinemadream.domain.Community">
+		<![CDATA[
+		select pre.no, pre.title 
+		from (select no, title 
+				from cd_community_bbs 
+				where no < #{no}
+				ORDER BY no DESC 
+				limit #{perPrefix}) as pre
+		UNION
+			select suf.no, suf.title 
+			from (select no, title 
+					from cd_community_bbs 
+					where no > #{no} 
+					ORDER BY no ASC 
+					limit #{perSuffix}) as suf;
+		]]>
+	</select>
+	<select id="getMaxSize" parameterType="java.util.HashMap" resultType="int">
+		select MAX((@rownum:=@rownum+1)) rownum
+		from (SELECT @rownum:=0) row, cd_community_bbs
+	</select>
+	
+	<select id="select" parameterType="int" resultType="com.kcontents.cinemadream.domain.Community">
+		select *
+		from cd_community_bbs
+		where no=#{no}
+	</select>
+	
+	<delete id="delete" parameterType="int">
+		delete from cd_community_bbs
+		WHERE no = #{no} 
+	</delete>
+</mapper>

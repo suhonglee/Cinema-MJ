@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<!-- 
+Korea Contents Company R&D TEAM
+Developer : lee su hong
+Last-Modified : 2013.11.07
+ -->
+<mapper namespace="partner">
+	
+	<insert id="insert" parameterType="com.kcontents.cinemadream.domain.Partner"  useGeneratedKeys="true" keyProperty="no" keyColumn="no">
+		insert into cd_partner_bbs
+		(title, content, category, time)
+		Values 
+		(#{title},#{content}, #{category}, now())
+	</insert>
+	
+	<select id="selectList" resultType="com.kcontents.cinemadream.domain.Partner">
+		select *
+		from cd_partner_bbs
+		order by no desc
+	</select>
+	
+	<delete id="delete" parameterType="int">
+		delete from cd_partner_bbs
+		WHERE no = #{no} 
+	</delete>
+</mapper>

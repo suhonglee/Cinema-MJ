@@ -1,0 +1,14 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css);
+body{ background-color: #fff; }
+.contents-area{	margin-top: 70px; width: 100%; overflow:auto; clear: both; min-width: 1230px; clear: both;}
+.a-side{ position: relative; min-width: 230px;	width: 17%;	background-color: #77c4bc;	float: left;}
+.side-menu{	position: relative;	top: 50px;	width: 85%;	height: 240px;	padding-left: 50px;}
+.side-menu-title{ width: 80%; height: 50px;	background-color: #222;	margin-bottom: 30px;}
+.side-menu-title > h4{ color: #fff; font-size: 27px; font-weight: 200; font-family: 'Nanum Gothic Coding', serif; line-height: 50px; text-align: center; }
+.side-menu > ul{ list-style-image: url(../img/icon/icon_plus.png);	color: #fff; }
+.side-menu > ul >li{ width: 70%; height: 50px;	line-height:50px; }
+.side-menu > ul >li > a{ font-family: 'Nanum Gothic Coding', serif;	font-size: 16px; font-weight: 200;	color: #fff; text-decoration: none; position: relative; left: 10px;	top: -5px;}
+
+.main-contents{	position: relative;	width: 70%;	min-width: 400px; float: left; }
+.main-contents > img{ position: relative; top: 50px; }
+.selected-menu{	border-bottom: 2px solid #fff; }

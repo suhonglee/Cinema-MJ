@@ -1,0 +1,179 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css);
+
+h4 , p{
+	font-family: 'Nanum Gothic Coding', serif;
+}
+.sp-wrapper{
+	width: 1020px;
+	padding: 30px 25px 100px 25px;
+	margin: 0px auto;
+	background-color: #fff;
+	border-bottom: 100px solid #efefef;
+}
+.sp-inform{
+	width: 1020px;
+	height:370px; 
+	margin: 0px auto;
+	overflow: hidden;
+}
+.sp-inform-left{
+	width: 540px;
+	height: 370px;
+}
+.sp-title{
+	width: 100%;
+	height: 20px;
+	margin-top: 0px;
+	background: url(../img/icon/title_pattern.png) left top;
+	margin-bottom: 20px;
+}
+.sp-inform-right{
+	width: 480px;
+	height: 370px;
+}
+.sp-inform > div{
+	float: left;
+}
+.sp-inform-right > p {
+	width: 300px;
+	height: 50px;
+	margin: 0px auto;
+	padding-top:60px;
+}
+tbody > tr > td:first-child{
+	width: 100px;
+	padding:10px 5px 10px 0px;
+}
+/*button*/
+.sp-inform-button {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #363636), color-stop(1, #242424) );
+	background:-moz-linear-gradient( center top, #363636 5%, #242424 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#363636', endColorstr='#242424');
+	background-color:#363636;
+	-webkit-border-top-left-radius:0px;
+	-moz-border-radius-topleft:0px;
+	border-top-left-radius:0px;
+	-webkit-border-top-right-radius:0px;
+	-moz-border-radius-topright:0px;
+	border-top-right-radius:0px;
+	-webkit-border-bottom-right-radius:0px;
+	-moz-border-radius-bottomright:0px;
+	border-bottom-right-radius:0px;
+	-webkit-border-bottom-left-radius:0px;
+	-moz-border-radius-bottomleft:0px;
+	border-bottom-left-radius:0px;
+	text-indent:0;
+	border:1px solid #383838;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	height:31px;
+	line-height:31px;
+	width:60px;
+	text-decoration:none;
+	text-align:center;
+}
+.sp-inform-button:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #242424), color-stop(1, #363636) );
+	background:-moz-linear-gradient( center top, #242424 5%, #363636 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#242424', endColorstr='#363636');
+	background-color:#242424;
+	color: #fff;
+}
+.sp-inform-button:active {
+	position:relative;
+	top:1px;
+}
+.sp-inform-button > a{
+	text-decoration: none;
+	color: #fff;
+}
+
+
+/*button end*/
+.sp-bottom{
+	width: 1020px;
+	min-height:500px;
+	margin: 0px auto;	
+	margin-bottom: 50px;
+}		
+.sp-title span{
+	background: #fff;
+	padding: 1px 7px 7px 0px;
+}
+.sp-table td {
+	padding: 10px 20px;
+	vertical-align: middle;
+	border-bottom: 1px solid #e2e2e2;
+}
+.sp-table > tbody > tr:hover{
+	background-color:#fafafa;
+}
+#sp-header-title{
+	width:100%;
+	height:100px;
+	border-bottom: 1px solid #e4e4e4;
+	border-top: 1px solid #e4e4e4;
+	margin-top:30px;
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #f6f6f6 47%, #ededed 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(47%,#f6f6f6), color-stop(100%,#ededed)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+}
+#sp-header-title > div{
+	width: 1020px;
+	height: 50px;
+	padding: 25px;
+	margin: 0px auto;
+}
+.sp-header-bottom{
+	width: 100%;
+	height: 8px;
+	background: url(../img/icon/title_pattern.png) left top;
+	margin-top:0px;
+	margin-bottom:50px;
+}
+li{
+	list-style:none;
+}
+h1{
+	font-family: 'Nanum Gothic Coding', serif;
+	height: 30px;
+	line-height: 30px;
+	font-size: 18px;
+	font-weight: bold;
+	color: #666;
+	margin:0;
+}
+h2{
+	font-family: 'Nanum Gothic Coding', serif;
+	height: 20px;
+	line-height: 20px;
+	font-size: 15px;
+	font-weight: bold;
+	color: #aaa;
+	margin:0;
+}
+.sp-footer{
+	width: 100%;
+	height: 20px;
+	margin-top: 0px;
+	background: url(../img/icon/title_pattern.png) left top;
+	margin-bottom: 10px;
+}
+
+.bottom-set > li > a,
+.bottom-set > li
+{
+	font-family: 'Nanum Gothic Coding', serif;
+	font-size: 15px;
+	color: #777;
+	margin: 3px;
+}

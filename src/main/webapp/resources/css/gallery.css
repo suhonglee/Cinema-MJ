@@ -1,0 +1,10 @@
+/* 하단 슬라이드 갤러리 */
+
+.gallery-box{ position: relative; overflow: hidden;}
+.gallery-wrapper{ position: relative;}
+.move-gallery{	position: relative;	width: 2000em;}
+.m-gallery{	position: relative;	float: left;}
+.right-gallery{	position: absolute;	top: 45%;	width: 25px; margin-left: 25px;	height: 50px;	float: left;	z-index: 1000;	opacity: 0.4;}
+.left-gallery{	position: absolute;	top: 45%;	width: 25px;  margin-right: 25px;	height: 50px;	float: right;	right: 0px;	z-index: 1000;	opacity: 0.4;}
+.right-gallery:hover , .left-gallery:hover{	opacity: 1; color: #fff;}
+

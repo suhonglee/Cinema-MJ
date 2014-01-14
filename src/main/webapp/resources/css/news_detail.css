@@ -1,0 +1,231 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothiccoding.css);
+h4 , p{
+	font-family: 'Nanum Gothic Coding', serif;
+}
+.news-wrapper{	width: 1020px;	padding: 30px 25px 40px 25px;	margin: 0px auto; background-color: #fff; border-bottom: 100px solid #efefef; min-height: 1000px;}
+.news-inform{	width: 1020px;	 	margin: 0px auto;	overflow: hidden;}
+.news-inform-left{	width: 720px;	}
+.news-inform-right{	width: 270px;	margin: 0px auto;	}
+.news-a-side{
+	float: right;
+	position: relative;
+	width: 270px;
+	min-height: 300px;
+	margin-bottom: 30px;
+}
+.news-title{
+	width: 100%;
+	height: 20px;
+	margin-bottom: 10px;
+	background: url(../img/icon/title_pattern.png) left top;
+}
+.news-title-icon{
+	background-color: #fff;
+	padding: 5px 5px 5px 5px;
+}
+.news-a-side > ul > li{
+	font-family: 'Nanum Gothic Coding', serif;
+	color: #6c6c6c;
+	list-style-image: url(../img/icon/icon_li.png);
+	margin: 5px 5px 5px 5px;
+}
+.news-inform > div{
+	float: left;
+}
+.news-a-side > p {
+	width: 200px;
+	height: 50px;
+	margin: 0px auto;
+	padding-top:60px;
+}
+.news-a-side > ul > li{
+	font-family: 'Nanum Gothic Coding', serif;
+	color: #6c6c6c;
+	list-style-image: url(${CONTEXT }/resources/img/icon/icon_li.png);
+	margin: 5px 5px 5px 5px;
+}
+tbody > tr > td:first-child{
+	width: 100px;
+	padding:10px 5px 10px 0px;
+}
+.news-body-button {
+	position:relative;
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+	background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+	background-color:#ededed;
+	-webkit-border-top-left-radius:4px;
+	-moz-border-radius-topleft:4px;
+	border-top-left-radius:4px;
+	-webkit-border-top-right-radius:4px;
+	-moz-border-radius-topright:4px;
+	border-top-right-radius:4px;
+	-webkit-border-bottom-right-radius:4px;
+	-moz-border-radius-bottomright:4px;
+	border-bottom-right-radius:4px;
+	-webkit-border-bottom-left-radius:4px;
+	-moz-border-radius-bottomleft:4px;
+	border-bottom-left-radius:4px;
+	text-indent:0;
+	display:inline-block;
+	color:#8f8f8f;
+	font-family:'Nanum Gothic Coding', serif;
+	font-size:15px;
+	font-weight:none;
+	font-style:normal;
+	height:27px;
+	line-height:27px;
+	width:120px;
+	text-decoration:none;
+	text-align:center;
+}
+.news-inform-button:active {
+	top:1px;
+}      
+.news-body-button2 {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #77c4bc), color-stop(1, #68bfb6) );
+	background:-moz-linear-gradient( center top, #77c4bc 5%, #68bfb6 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#77c4bc', endColorstr='#68bfb6');
+	background-color:#77c4bc;
+	-webkit-border-top-left-radius:4px;
+	-moz-border-radius-topleft:4px;
+	border-top-left-radius:4px;
+	-webkit-border-top-right-radius:4px;
+	-moz-border-radius-topright:4px;
+	border-top-right-radius:4px;
+	-webkit-border-bottom-right-radius:4px;
+	-moz-border-radius-bottomright:4px;
+	border-bottom-right-radius:4px;
+	-webkit-border-bottom-left-radius:4px;
+	-moz-border-radius-bottomleft:4px;
+	border-bottom-left-radius:4px;
+	text-indent:0;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	font-weight:bold;
+	font-style:normal;
+	height:30px;
+	line-height:30px;
+	width:88px;
+	text-decoration:none;
+	text-align:center;
+	margin-bottom:15px;
+	cursor:pointer;
+}
+.news-body-button2  > a {
+	width: 100%;
+	height: 100%;
+	color: #fff;
+	text-decoration: none;
+}
+.news-body-button2:hover {
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #242424), color-stop(1, #242424) );
+	background:-moz-linear-gradient( center top, #242424 5%, #242424 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#242424', endColorstr='#242424');
+	background-color:#68bfb6;
+}.news-body-button2:active {
+	position:relative;
+	top:1px;
+}  
+.news-body{
+	width: 100%;
+	margin: 0px auto;	
+}		
+.news-body > p > span{
+	margin-top:15px;
+}
+.news-title span{
+	background: #fff;
+	padding: 1px 7px 7px 0px;
+}
+.news-table td {
+	padding: 10px 20px;
+	vertical-align: middle;
+	border-bottom: 1px solid #e2e2e2;
+}
+.news-table > tbody > tr:hover{
+	background-color:#fafafa;
+}
+#news-header-title{
+	width:100%;
+	height:100px;
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #f6f6f6 47%, #ededed 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(47%,#f6f6f6), color-stop(100%,#ededed)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#f6f6f6 47%,#ededed 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed',GradientType=0 ); /* IE6-9 */
+	border-bottom: 1px solid #e4e4e4;
+	border-top: 1px solid #e4e4e4;
+	margin-top:30px;
+}
+#news-header-title > div{
+	width: 1024px;
+	height: 50px;
+	padding: 25px;
+	margin: 0px auto;
+}
+.news-header-bottom{
+	width: 100%;
+	height: 8px;
+	background: url(../img/icon/title_pattern.png) left top;
+	margin-top:0px;
+	margin-bottom:50px;
+}
+.sp-footer > ul{
+	margin-left:5px;
+}
+li{
+	list-style:none;
+}
+h1{
+	font-family: 'Nanum Gothic Coding', serif;
+	height: 30px;
+	line-height: 30px;
+	font-size: 18px;
+	font-weight: bold;
+	color: #666;
+	margin:0;
+}
+h2{
+	font-family: 'Nanum Gothic Coding', serif;
+	height: 20px;
+	line-height: 20px;
+	font-size: 20px;
+	font-weight: bold;
+	color: #dddd;
+	margin:0;
+}
+h4{
+	font-family: 'Nanum Gothic Coding', serif;
+	height: 22px;
+	line-height: 22px;
+	font-size: 15px;
+	font-weight: bold;
+	margin:0;
+}
+.news-footer{
+		width: 100%;
+		height: 20px;
+		margin-top: 0px;
+		background: url(../img/icon/title_pattern.png) left top;
+		margin-bottom: 10px;
+}
+.sp-title{
+	height: 18px;
+	margin-bottom: 10px;
+	background: url(../img/icon/title_pattern.png) left top;
+}
+span{
+	background-color: #fff;
+	padding: 5px 5px 5px 5px;
+}
+.news-body{
+	width: 700px;
+	min-height: 300px;
+	overflow: hidden;
+}

@@ -1,0 +1,25 @@
+.footer{background-color: #fff;	position: relative;	width: 100%;}
+.footer-wrapper{width: 1020px;	height: 560px;	padding: 30px 25px 30px 25px;	margin: 0px auto;}
+.footer-items{	width: 300px;	height: 430px;	float: left;	margin: 50px 5px 5px 5px;	padding: 0px 15px 0px 15px;}
+.footer-items-contents{	width: 100%;	height: 390px;}
+.footer-items-contents > h5{	font-size: 25px;	font-weight: 100;	color: #777;}
+.footer-items-contents > h6{	font-weight: 100;	color: #777;}
+.footer-items-contents > h6 > a{	font-weight: 100;	color: #777;}
+.bt-hover-img{	width: 140px;	height: 140px;	margin: 50px 0px 30px 70px;}
+.bt-hover01{ background: url(../img/footer/f_icon01.png) no-repeat; }
+.bt-hover01:hover{ background: url(../img/footer/f_icon01-2.png) no-repeat; }
+.bt-hover02{ background: url(../img/footer/f_icon02.png) no-repeat; }
+.bt-hover02:hover{ background: url(../img/footer/f_icon02-2.png) no-repeat; }
+.bt-hover03{ background: url(../img/footer/f_icon03.png) no-repeat; }
+.bt-hover03:hover{ background: url(../img/footer/f_icon03-2.png) no-repeat; }
+.footer-items-bottom{	position: relative;	width: 330px;	height: 30px;	bottom: 0px;}
+.ft-dashed{	width: 90%;	background: url(../img/icon/pattern02.png);	display: block;	text-align: center;	font: 600 18px/18px proxima-nova-extra-condensed, 'Helvetica Neue', Helvetica, Arial, sans-serif;	text-transform: uppercase;	height: 18px}
+.ft-dashed > span{	text-decoration: none;	background-color: #fff;	padding: 3px;	color: #555;}
+.inner-logo{	position: relative;	width: 74px;	height: 54px;	margin: 0px auto;	top: 35px;	}
+.footer-wrapper > h5{	text-align: center;	color: #ccc;font-weight: 100;}
+.logos01{background:url(../img/icon/icon_main02.png)}
+.logos02{background:url(../img/icon/icon_main03.png)}
+.logos03{background:url(../img/icon/icon_main04.png)}
+
+
+
